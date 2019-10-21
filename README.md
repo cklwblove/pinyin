@@ -2,6 +2,9 @@
 
 Simple Chinese conversion to pinyin library.
 
+### Docs
+https://cklwblove.github.io/pinyin/
+
 ### Usage
 
 ```bash
