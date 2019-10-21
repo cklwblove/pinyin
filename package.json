@@ -1,6 +1,6 @@
 {
   "name": "@liwb/pinyin",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Simple Chinese conversion to pinyin library",
   "keywords": [
     "pinyin"
@@ -18,7 +18,7 @@
   "author": "cklwblove <lwbhtml@163.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:cklwblove/pinyin.git"
   },
   "license": "MIT",
   "engines": {
@@ -38,7 +38,9 @@
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "prepush": "npm run test:prod && npm run build",
+    "commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -112,7 +114,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.18.0",
-    "semantic-release": "^15.9.16",
+    "semantic-release": "^15.13.27",
     "shelljs": "^0.8.3",
     "travis-deploy-once": "^5.0.9",
     "ts-jest": "^23.10.2",

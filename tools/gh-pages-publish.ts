@@ -13,6 +13,7 @@ if (typeof pkg.repository === "object") {
   repoUrl = pkg.repository
 }
 
+// parsedUrl 这里必须是 http 或 https 的地址
 let parsedUrl = url.parse(repoUrl)
 let repository = (parsedUrl.host || "") + (parsedUrl.path || "")
 let ghToken = process.env.GH_TOKEN
