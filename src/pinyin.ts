@@ -8,7 +8,7 @@ import PinYin from './data'
 function isChinese(str: string) {
   const cnChar = str.match(/[^\x00-\x80]/g)
 
-  return cnChar != null && cnChar.length > 0
+  return cnChar !== null && cnChar.length > 0
 }
 
 /**
